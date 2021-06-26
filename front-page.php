@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Main Template
+ * Front Template
  * 
  * @package aurora
  */
@@ -10,7 +10,7 @@
 ?>
 
 
-Hello 
+<?php the_content(); ?>
 
 <?php
 get_footer();

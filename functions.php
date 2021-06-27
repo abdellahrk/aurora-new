@@ -55,10 +55,54 @@ function auroratheme_register_styles() {
     wp_enqueue_style( 'libraries', get_template_directory_uri() . '/assets/css/libraries.css', array(), $theme_version );
 
     wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.5.1.min.js', array ( 'jquery' ), 1.1, true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array ( ), $theme_version);
-    wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.js', array ( ), $theme_version);
-
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), $theme_version);
+    wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), $theme_version);
 
 }
 
 add_action( 'wp_enqueue_scripts', 'auroratheme_register_styles' );
+
+/* Custom Post Type for Services */
+
+function create_service_postype() {
+
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'excerpt',
+        'custom-fields',
+        'post-formats',
+    );
+
+    $labels = array(
+        'name' => __('Services', 'plural'),
+        'singular_name' => __('Service', 'singular'),
+        'menu_name' => __('Services', 'admin_menu'),
+        'name_admin_bar' => __('Services', 'admin_bar'),
+        'add_new' => __('Add New', 'add new'),
+        'add_new_item' => __('Add New Service'),
+        'new_item' => __('New Service'),
+        'edit_item' => __('Edit Service'),
+        'view_item' => __('View Service'),
+        'all_items' => __('All Services'),
+        'search_items' => __('Search Services'),
+        'not_found' => __('No Service Found')
+    );
+
+    $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'services'),
+        'has_archive' => true,
+        'hierarchical' => false,
+    );
+
+    register_post_type( 'services', $args);
+}
+// Hooking up our function to theme setup
+add_action('init', 'create_service_postype');
+
+/* Custom Post Type for Service End */

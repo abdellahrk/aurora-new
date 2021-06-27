@@ -1,14 +1,3 @@
-<?php 
-
-/**
- * Header file for the Aurora theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- */
-
-?>
 <!DOCTYPE html>
 <html <?php language_attributes( ); ?>>
 
@@ -16,6 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width">
     <title><?php bloginfo('blogname') ?></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
   <?php wp_head() ?>
 </head>
 

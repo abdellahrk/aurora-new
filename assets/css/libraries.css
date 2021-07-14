@@ -38,44 +38,13 @@
     -moz-osx-font-smoothing: grayscale
 }
 
-.icon-lock:before {
-  content: "\e928";
-}
-.icon-mail:before {
-  content: "\e929";
-}
-.icon-phone:before {
-  content: "\e92a";
-}
-.icon-analytics:before {
-  content: "\e900";
-}
-.icon-arrow-left:before {
-  content: "\e901";
-}
-.icon-arrow-left-2:before {
-  content: "\e902";
-
-}
-.icon-arrow-right:before {
-  content: "\e903";
-}
-.icon-arrow-right-2:before {
-  content: "\e904";
-
-}
-.icon-arrow-up-2:before {
-  content: "\e905";
-
-}
 .icon-backup:before {
-  content: "\e906";
-}
-.icon-clock:before {
-  content: "\e907";
-
+  content: "\e905";
 }
 .icon-cloud:before {
+  content: "\e906";
+}
+.icon-analytics:before {
   content: "\e908";
 }
 .icon-compressed:before {
@@ -105,13 +74,10 @@
 .icon-management:before {
   content: "\e911";
 }
-.icon-map:before {
-  content: "\e912";
-}
 .icon-network:before {
   content: "\e913";
 }
-.icon-network-2:before {
+.icon-network2:before {
   content: "\e914";
 }
 .icon-optimization:before {
@@ -132,42 +98,64 @@
 .icon-query:before {
   content: "\e91a";
 }
-.icon-quote:before {
+.icon-relational:before {
   content: "\e91b";
 }
-.icon-relational:before {
+.icon-searching:before {
   content: "\e91c";
 }
-.icon-search:before {
+.icon-server:before {
   content: "\e91d";
 }
-.icon-searching:before {
+.icon-server2:before {
   content: "\e91e";
 }
-.icon-server:before {
+.icon-software:before {
   content: "\e91f";
 }
-.icon-server-2:before {
+.icon-statistic:before {
   content: "\e920";
 }
-.icon-software:before {
-  content: "\e921";
-}
-.icon-statistic:before {
+.icon-technician:before {
   content: "\e922";
 }
-.icon-technician:before {
+.icon-transaction:before {
   content: "\e923";
 }
-.icon-transaction:before {
+.icon-upload:before {
   content: "\e924";
 }
-.icon-upload:before {
+.icon-website:before {
   content: "\e925";
 }
+.icon-search:before {
+  content: "\e904";
+ }
 .icon-user:before {
-  content: "\e926";
+  content: "\e903";
 }
-.icon-website:before {
-  content: "\e927";
+.icon-nav:before {
+  content: "\e902";
+  font-size: 60%;
+}
+.icon-arrow-left2:before {
+  content: "\e929";
+}
+.icon-arrow-right2:before {
+  content: "\e92a";
+}
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-clock:before {
+  content: "\e907";
+}
+.icon-envelope:before {
+  content: "\e912";
+}
+.icon-phone:before {
+  content: "\e921";
 }

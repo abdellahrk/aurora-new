@@ -1,8 +1,9 @@
 /*--------------------------
-    Project Name: DataSoft
+    Project Name: Mintech
     Version: 1.0
     Author: 7oorof
-    Relase Date: February 2021
+    Devloped by: Ahmed Abdallah (a.abdallah999@gmail.com)
+    Relase Date: October 2020
 ---------------------------*/
 /*---------------------------
       Table of Contents
@@ -37,20 +38,20 @@ $(function () {
     });
 
     /*==========   Mobile Menu   ==========*/
-    $('.navbar-toggler').on('click', function () {
-        $('.navbar-collapse').addClass('menu-opened');
+    var $navToggler = $('.navbar-toggler');
+    $navToggler.on('click', function () {
+        $(this).toggleClass('actived');
     })
-
-    $('.close-mobile-menu').on('click', function (e) {
-        $('.navbar-collapse').removeClass('menu-opened');
-    });
+    $navToggler.on('click', function () {
+        $('.navbar-collapse').toggleClass('menu-opened');
+    })
 
     /*==========   Sticky Navbar   ==========*/
     $win.on('scroll', function () {
         if ($win.width() >= 992) {
             var $stickyNavbar = $('.sticky-navbar'),
                 $secondaryNavbar = $('.secondary-nav');
-            if ($win.scrollTop() > 150) {
+            if ($win.scrollTop() > 50) {
                 $stickyNavbar.addClass('is-sticky');
             } else {
                 $stickyNavbar.removeClass('is-sticky');
@@ -122,11 +123,11 @@ $(function () {
     });
 
     /*==========   Add active class to accordions   ==========*/
-    $('.accordion__header').on('click', function () {
+    $('.accordion-item__header').on('click', function () {
         $(this).parent('.accordion-item').toggleClass('opened');
         $(this).parent('.accordion-item').siblings().removeClass('opened');
     })
-    $('.accordion__title').on('click', function (e) {
+    $('.accordion-item__title').on('click', function (e) {
         e.preventDefault()
     });
 
